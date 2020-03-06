@@ -11,9 +11,9 @@ module.exports = function (passport) {
 
     const options = {
         callbackURL: 'http://localhost:4001/auth/callback',
-        clientDomain: 'https://bulkfedlogin.auth.eu-west-1.amazoncognito.com',
-        clientID: '6c93gj1786na3d73c6sm5vbkmn',
-        clientSecret: 'fbf4t7k0h6r51cv08ohfcrb10m26carbb6oq9uf9p895e8eneit',
+        clientDomain: 'https://domain.auth.eu-west-1.amazoncognito.com',
+        clientID: 'yourclientid',
+        clientSecret: 'yourclientsecret',
         region: 'eu-west-1',
         passReqToCallback: true
     };
