@@ -44,5 +44,7 @@ function indexHandler(req, res) {
     res.render('pages/index', pageParameters)
 }
 
+
 console.log('App running on ' + port)
+
 app.listen(port);
