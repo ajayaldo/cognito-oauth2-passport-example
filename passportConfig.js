@@ -11,14 +11,12 @@ module.exports = function (passport) {
 
     const options = {
         callbackURL: 'http://localhost:4001/auth/callback',
-        clientDomain: 'https://bulkfedlogin.auth.eu-west-1.amazoncognito.com',
-        clientID: '6c93gj1786na3d73c6sm5vbkmn',
-        clientSecret: 'fbf4t7k0h6r51cv08ohfcrb10m26carbb6oq9uf9p895e8eneit',
+        clientDomain: 'https://yourdomain.auth.eu-west-1.amazoncognito.com',
+        clientID: 'cognitoclientid',
+        clientSecret: 'cognitoclientsecret',
         region: 'eu-west-1',
         passReqToCallback: true
     };
-
-    const customOptions = { identity_provider: 'samlapp' }
 
     async function verify(req, accessToken, refreshToken, profile, done) {
 
@@ -31,6 +29,7 @@ module.exports = function (passport) {
 
         return done(null, sessionData);
     };
-
+    //you can provide the custom parameters like identity_providers, idp_identifier, code_challenge, code_challenge_method in custom options. 
+    const customOptions = { identity_provider: 'samlapp' }
     passport.use('cognito', new CognitoOAuth2Strategy(options, verify, customOptions));
 };
