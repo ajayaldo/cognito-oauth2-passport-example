@@ -1,0 +1,26 @@
+{
+    "name": "passport-cognito-oauth2",
+    "version": "0.0.0",
+    "description": "",
+    "keywords": [
+        "example",
+        "express",
+        "passport",
+        "cognito",
+        "oauth2",
+        "aws"
+    ],
+    "dependencies": {
+        "@ajayaldo/passport-cognito-oauth2": "^1.0.4",
+        "body-parser": "^1.19.0",
+        "connect-ensure-login": "^0.1.1",
+        "connect-flash": "^0.1.1",
+        "cookie-parser": "^1.4.4",
+        "ejs": "^2.7.4",
+        "express": "^4.17.1",
+        "express-session": "^1.16.1",
+        "passport": "^0.4.0",
+        "passport-local": "^1.0.0",
+        "req-flash": "0.0.3"
+    }
+}
