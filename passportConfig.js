@@ -1,5 +1,4 @@
 const CognitoOAuth2Strategy = require('@ajayaldo/passport-cognito-oauth2');
-
 module.exports = function (passport) {
     passport.serializeUser(function (user, done) {
         done(null, user);
