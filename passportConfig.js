@@ -21,10 +21,7 @@ module.exports = function (passport) {
     async function verify(req, accessToken, refreshToken, profile, done) {
 
         let sessionData = {
-            username: profile.username,
-            role: 'Admin',
-            userId: 1,
-            isAdmin: true
+            username: profile.username
         }
 
         return done(null, sessionData);
